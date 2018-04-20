@@ -12,7 +12,7 @@ XAMPP
 * MySQL Database Server
 
 ## Instructions:
-1. Save the folder `storm-users` in `xampp\htdocs\`.
+1. Clone or download the `storm-users` repository and save it in `xampp\htdocs\`.
 2. Run XAMPP then start the Apache HTTP Server and MySQL Database Server.
 3. Go to http://localhost/phpmyadmin/ to access PHPMy Admin.
     * 3.1. Click on `databases` and create a new database. Name it `api_db`.
