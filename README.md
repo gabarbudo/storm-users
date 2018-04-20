@@ -14,7 +14,7 @@ XAMPP
 ## Instructions:
 1. Clone or download the `storm-users` repository and save it in `xampp\htdocs\`.
 2. Run XAMPP then start the Apache HTTP Server and MySQL Database Server.
-3. Go to http://localhost/phpmyadmin/ to access PHPMy Admin.
+3. Go to http://localhost/phpmyadmin/ to access PHPMyAdmin.
     * 3.1. Click on `databases` and create a new database. Name it `api_db`.
     * 3.2. Select `api_db` from the left sidebar.
     * 3.3. Click `Import`.
