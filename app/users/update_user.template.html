@@ -1,0 +1,55 @@
+<md-dialog>
+    <form ng-cloak name="updateForm">
+ 
+        <!-- dialog box title -->
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Edit User Information</h2>
+            </div>
+        </md-toolbar>
+ 
+        <md-dialog-content>
+            <div class="md-dialog-content">
+                <p class="rqd">*Required fields</p>
+                <!-- dialog box input fields with editable user information -->
+                <md-input-container class="md-block">
+                    <label>First Name</label>
+                    <input md-maxlength="50" required name="first_name" ng-model="first_name">
+                </md-input-container>
+ 
+                <md-input-container class="md-block">
+                    <label>Middle Name (optional)</label>
+                    <input md-maxlength="50" ng-model="middle_name">
+                </md-input-container>
+ 
+                <md-input-container class="md-block">
+                    <label>Last Name</label>
+                    <input md-maxlength="50" required name="last_name" ng-model="last_name">
+                </md-input-container>
+
+                <md-input-container class="md-block">
+                    <label>Gender</label>
+                    <md-select required name="gender" ng-model="gender">
+                        <md-option><em>Select gender</em></md-option>
+                        <md-option ng-model="gender" ng-repeat="gender in selectGender" value="{{gender}}">
+                            {{gender}}
+                        </md-option>
+                    </md-select>
+                </md-input-container>
+
+                <md-input-container class="md-block">
+                    <label>Email Address</label>
+                    <input required type="email" name="email" ng-model="email" minlength="10" md-maxlength="255" ng-pattern="/^.+@.+\..+$/">
+                    <div class="hint">e.g. example@example.com</div>
+                </md-input-container>
+ 
+            </div>
+        </md-dialog-content>
+ 
+        <!-- dialog box buttons -->
+        <md-dialog-actions layout="row">
+            <md-button ng-click="cancel()">Cancel</md-button>
+            <md-button class="md-primary" ng-disabled="updateForm.$invalid" ng-click="updateUser()">Update</md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>
